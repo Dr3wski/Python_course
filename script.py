@@ -46,7 +46,11 @@ print("Customer Two Total:")
 print(customer_two_total)
 
 
-
+##Functions: 
+  def create_spreadsheet(title, row_count=1000):
+  print("Creating a spreadsheet called "+ title+" with "+str(row_count)+" rows")
+create_spreadsheet("Downloads")
+create_spreadsheet("Applications",row_count=10)
 
 
 
