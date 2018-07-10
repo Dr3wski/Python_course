@@ -104,4 +104,15 @@ print("The GE train does " + str(train_work) + " Joules of work over " + str(tra
 
 
 
-
+#Wins calculation
+# Write your win_percentage function here:
+def win_percentage(wins, losses):
+  total = wins + losses
+  return (wins/total)*100
+# Uncomment these function calls to test your win_percentage function:
+#print(win_percentage(5, 5))
+# should print 50
+#print(win_percentage(10, 0))
+# should print 100
+print(win_percentage(5, 5))
+print(win_percentage(10, 0))
