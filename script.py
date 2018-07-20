@@ -116,3 +116,54 @@ def win_percentage(wins, losses):
 # should print 100
 print(win_percentage(5, 5))
 print(win_percentage(10, 0))
+
+
+
+# Shipping task
+
+def ground_shipping(weight):
+  flat_charge = 20
+  if (weight <= 2):
+    return (weight*1.5) + (flat_charge)
+  elif (weight > 2) and (weight <= 6): 
+    return(weight*3) + (flat_charge)
+  elif (weight > 6) and (weight <= 10): 
+    return (weight*4) + (flat_charge)
+  else:
+    return (weight*4.75) + (flat_charge)
+  
+print(ground_shipping(8.4))
+
+premium_ground_shipping = 125
+
+def drone_shipping(weight): 
+  flat_charge = 0
+  if (weight <= 2):
+    return (weight*4.5) + (flat_charge)
+  elif (weight > 2) and (weight <= 6): 
+    return(weight*9) + (flat_charge)
+  elif (weight > 6) and (weight <= 10): 
+    return (weight*12) + (flat_charge)
+  else:
+    return (weight*14.25) + (flat_charge)
+  
+  
+print(drone_shipping(1.5))
+
+def best_method(weight):
+  if (ground_shipping(weight)) < (premium_ground_shipping) and (ground_shipping(weight)) < (drone_shipping(weight)): 
+    print("Ground shipping is your cheapest option, it will cost $"+ str(ground_shipping(weight)))
+  elif (drone_shipping(weight)) < (premium_ground_shipping) and (drone_shipping(weight)) < (ground_shipping(weight)):
+    print("Drone Shipping is your cheapest option, it will cost $" +str(drone_shipping(weight)))
+  else: 
+    print("Premium Delivery is your best option")
+
+
+
+best_method(4.8)
+best_method(41.5)
+
+
+      
+      
+      
